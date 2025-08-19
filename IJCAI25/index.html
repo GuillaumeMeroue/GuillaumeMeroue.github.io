@@ -2,12 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.2">
     <title>Luce Sandbox</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../favicon.ico" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
+        /* Styles spécifiques pour la page Luce Sandbox */
+        .slider-container {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
         .bar { fill-opacity: 0.8; }
         .axis-label { font-size: 12px; }
-        .legend { font-size: 12px; }
+        
         .tooltip {
             position: absolute;
             text-align: center;
@@ -20,6 +32,7 @@
             border-radius: 8px;
             pointer-events: none;
         }
+
         .legend-box {
             display: flex;
             flex-direction: column;
@@ -27,46 +40,40 @@
             position: absolute;
             right: 20px;
             top: 50px;
+            padding: 10px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
+        
         .legend-item {
+            margin: 5px 0;
             display: flex;
             align-items: center;
-            margin-bottom: 5px;
         }
+        
         .legend-color {
+            display: inline-block;
             width: 15px;
             height: 15px;
-            margin-right: 5px;
+            margin-right: 8px;
+            border: 1px solid #ddd;
         }
 
-        .nav-bar {
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border-radius: 8px;
-        }
-        .nav-bar button {
-            padding: 10px 20px;
-            margin-right: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-        }
-        .nav-bar button:hover {
-            background-color: #0056b3;
-        }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-
     </style>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
     <div class="nav-bar">
-        <button onclick="window.location.href='index.html'">Luce Sandbox</button>
+        <a href="../index.html" class="home-link">← Back to Home</a>
+        <button onclick="window.location.href='index.html'" class="active">Luce Sandbox</button>
         <button onclick="window.location.href='luce_correlation.html'">Luce Correlation</button>
         <button onclick="window.location.href='mallows_correlation.html'">Mallows Correlation</button>
     </div>

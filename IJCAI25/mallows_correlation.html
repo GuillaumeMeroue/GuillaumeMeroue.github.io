@@ -2,64 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mallows Correlation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../favicon.ico" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
 
+        /* Styles spécifiques à la page Mallows Correlation */
         .slider-container {
-            margin-top: 20px;
-        }
-        .tooltip {
-            position: absolute;
-            text-align: center;
-            width: auto;
-            height: auto;
-            padding: 5px;
-            font: 12px sans-serif;
-            background: lightsteelblue;
-            border: 0px;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #eee;
             border-radius: 8px;
-            pointer-events: none;
-            opacity: 0.9;
         }
 
         .legend {
             display: inline-block;
             vertical-align: top;
-            margin-left: 20px;
+            margin: 15px 0 0 20px;
+            padding: 10px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
 
         .legend-item {
-            margin-bottom: 5px;
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
         }
 
         .legend-color {
             display: inline-block;
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
+            width: 15px;
+            height: 15px;
+            margin-right: 8px;
+            border: 1px solid #ddd;
         }
 
-        .nav-bar {
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border-radius: 8px;
-        }
-        .nav-bar button {
-            padding: 10px 20px;
-            margin-right: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-        }
-        .nav-bar button:hover {
-            background-color: #0056b3;
-        }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
 
@@ -68,9 +57,10 @@
 <body>
 
     <div class="nav-bar">
+        <a href="../index.html" class="home-link">← Get back Home</a>
         <button onclick="window.location.href='index.html'">Luce Sandbox</button>
         <button onclick="window.location.href='luce_correlation.html'">Luce Correlation</button>
-        <button onclick="window.location.href='mallows_correlation.html'">Mallows Correlation</button>
+        <button onclick="window.location.href='mallows_correlation.html'" class="active">Mallows Correlation</button>
     </div>
 
     <div class="section">
